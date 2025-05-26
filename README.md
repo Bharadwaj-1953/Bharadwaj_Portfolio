@@ -74,7 +74,7 @@ Visit [http://localhost:5173](http://localhost:5173) to view the website locally
 ## 📬 Contact
 
 - **Email**: [manne.bharadwaj.1953@gmail.com](mailto:manne.bharadwaj.1953@gmail.com)  
-- **LinkedIn**: [Bharadwaj Manne](https://www.linkedin.com/in/bharadwaj-manne)  
+- **LinkedIn**: [Bharadwaj Manne](https://www.linkedin.com/in/bharadwaj-manne-711476249/)  
 - **GitHub**: [@Bharadwaj-1953](https://github.com/Bharadwaj-1953)
 
 ---
