@@ -2,34 +2,34 @@ const experience = [
   {
     title: "Cloud Developer Intern",
     companyName: "Unical Systems",
-    location: "Hyderabad",
+    location: "Hyderabad, India",
     date: "Dec 2023 – Apr 2024",
     points: [
-        "Designed and deployed scalable AWS cloud infrastructure, improving system availability and reducing operational costs by 30%.",
-        "Implemented Docker-based microservices and Kubernetes orchestration, accelerating deployment times and making the infrastructure more resilient.",
-        "Built automated scaling and monitoring solutions, helping maintain 99.9% uptime during variable workloads."
+        "Deployed scalable microservices on AWS EC2, S3, and IAM, automating deployment and configuration workflows.",
+        "Containerized applications using Docker and Kubernetes, reducing downtime by 39% and improving scalability.",
+        "Built CI/CD pipelines with Jenkins and Terraform, enhancing integration efficiency and cloud performance."
     ]
   },
   {
-    title: "Data Scientist Intern",
-    companyName: "Smart Bridge",
-    location: "Hyderabad",
+    title: "Applied Data Science Extern",
+    companyName: "SmartInternz",
+    location: "Remote",
     date: "May 2023 – Jul 2023",
     points: [
-      "Developed a machine learning-based crop prediction system using Random Forest and XGBoost, improving forecast accuracy to around 96%.",
-      "Processed and engineered over 5,000 agricultural datasets to fine-tune predictive models and deliver actionable insights.",
-      "Designed a lightweight Flask web application to visualize predictions, making the tool accessible for non-technical stakeholders."
+      "Developed an applied data science pipeline using Python, Pandas, NumPy, and Scikit-learn for large-scale analytics.",
+      "Built and evaluated predictive machine learning models achieving 96% accuracy on real-world datasets.",
+      "Deployed trained models through Flask REST APIs and cloud services, enabling real-time prediction and visualization."
     ]
   },
   {
-    title: "Java Developer Intern",
+    title: "Java Development Intern",
     companyName: "Oasis Infobyte",
-    location: "New Delhi",
-    date: "Jun 2022 – Aug 2022",
+    location: "Remote",
+    date: "Sep 2022 – Oct 2022",
     points: [
-      "Developed and optimized payroll management software that reduced payroll processing time by nearly 40% for a 500-employee organization.",
-      "Built RESTful APIs with Spring Boot to integrate payroll operations with HR platforms, streamlining administrative tasks.",
-      "Conducted collaborative code reviews and testing sessions, contributing to a 30% reduction in post-deployment issues."
+      "Designed a payroll management system in Java (Spring Boot + MySQL), improving process efficiency by 47%.",
+      "Implemented secure authentication and RESTful APIs for data management and transactions.",
+      "Performed debugging, unit testing, and optimization to enhance reliability and performance."
     ]
   }
 ];
