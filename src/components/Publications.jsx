@@ -29,16 +29,16 @@ const publications = [
 
 const Publications = () => {
   return (
-    <section className="py-20 px-6 md:px-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-slate-300">
+    <section className="publications-section py-20 px-6 md:px-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-slate-300">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
         Papers & Publications
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-[1270px] mx-auto">
+      <div className="publications-grid grid md:grid-cols-2 gap-8 max-w-[1270px] mx-auto">
         {publications.map((pub, index) => (
           <div
             key={index}
-            className="bg-gray-800/60 p-6 rounded-xl shadow-md transition-transform hover:scale-[1.03] hover:shadow-xl flex flex-col justify-between"
+            className="publication-card bg-gray-800/60 p-6 rounded-xl shadow-md transition-transform hover:scale-[1.03] hover:shadow-xl flex flex-col justify-between"
           >
             <div>
               <h3 className="text-md font-semibold text-indigo-300 text-center mb-3">
@@ -50,7 +50,7 @@ const Publications = () => {
                 {pub.points.map((point, i) => (
                   <div key={i} className="flex items-start">
                     <span className="w-[6px] h-[6px] mt-2 mr-4 bg-white rounded-full shrink-0" />
-                    <p className="text-slate-300 leading-relaxed">
+                    <p className="text-slate-300 leading-relaxed text-justify">
                       {point}
                     </p>
                   </div>
@@ -71,15 +71,17 @@ const Publications = () => {
             </div>
 
             {/* View Link */}
-            <a
-              href={pub.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1 mt-4 transition-all group"
-            >
-              <span className="group-hover:underline">{pub.linkText}</span>
-              <span className="text-lg">→</span>
-            </a>
+            <div className="text-center mt-4">
+              <a
+                href={pub.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1 transition-all group"
+              >
+                <span className="group-hover:underline">{pub.linkText}</span>
+                <span className="text-lg">→</span>
+              </a>
+            </div>
           </div>
         ))}
       </div>
