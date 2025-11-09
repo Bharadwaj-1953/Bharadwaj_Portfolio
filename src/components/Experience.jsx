@@ -3,7 +3,7 @@ import experience from "../data/experience";
 
 const logoMap = {
   "Unical Systems": "/Unical.jpg",
-  "Smart Bridge": "/SmartBridge.png",
+  "SmartInternz": "/SmartBridge.png",
   "Oasis Infobyte": "/Oasis.jpg",
 };
 
