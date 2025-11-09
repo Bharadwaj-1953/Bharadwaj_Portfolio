@@ -1,5 +1,27 @@
 const experience = [
   {
+    title: "Graduate Research Assistant",
+    companyName: "Florida State University",
+    location: "Tallahassee, FL",
+    date: "May 2025 - Present",
+    points: [
+      "Conducting research on concurrency detection, persistent memory, and performance optimization in modern systems.",
+      "Developing LLVM-based instrumentation for synchronization tracing and race-condition analysis.",
+      "Building multi-threaded benchmarking frameworks to evaluate performance and improve system efficiency."
+    ]
+  },
+  {
+    title: "Graduate Teaching Assistant",
+    companyName: "Florida State University",
+    location: "Tallahassee, FL",
+    date: "Aug 2025 - Present",
+    points: [
+      "Mentoring students in systems programming, process scheduling, and synchronization mechanisms.",
+      "Managing and automating virtual machine setups for project development using Proxmox.",
+      "Conducting lab sessions and recitations on system calls, timers, and semaphores to enhance practical learning."
+    ]
+  },
+  {
     title: "Cloud Developer Intern",
     companyName: "Unical Systems",
     location: "Hyderabad, India",
