@@ -22,9 +22,10 @@ const Education = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
         Education
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-[900px] mx-auto">
+
+      {/* Responsive Grid without resizing desktop */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[900px] mx-auto">
         {educationData.map((edu, index) => {
-          // If it's the VITAP logo, use object-contain; else object-cover
           const isVITAP = edu.logo.includes("VITAP");
           const logoClasses = `w-28 h-28 ${
             isVITAP ? "object-contain" : "object-cover"
@@ -33,23 +34,20 @@ const Education = () => {
           return (
             <div
               key={index}
-              className="bg-gray-800/60 rounded-xl shadow-md p-6 text-center transition-transform hover:scale-[1.03] hover:shadow-xl"
+              className="bg-gray-800/60 rounded-xl shadow-md p-6 text-center transition-transform hover:scale-[1.03] hover:shadow-xl w-full"
             >
-              <img
-                src={edu.logo}
-                alt={edu.university}
-                className={logoClasses}
-              />
-              <h3 className="text-lg font-semibold text-indigo-300 mb-1">
-                {edu.degree}
-              </h3>
-              <p className="text-sm text-slate-200 mb-1">{edu.university}</p>
-              <p className="text-xs text-slate-400 italic mb-3">
-                {edu.duration}
-              </p>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                {edu.description}
-              </p>
+              <div className="flex flex-col items-center justify-center">
+                <img src={edu.logo} alt={edu.university} className={logoClasses} />
+                <h3 className="text-lg font-semibold text-indigo-300 mb-1 text-center">
+                  {edu.degree}
+                </h3>
+                <p className="text-sm text-slate-200 mb-1 text-center">
+                  {edu.university}
+                </p>
+                <p className="text-xs text-slate-400 italic text-center">
+                  {edu.duration}
+                </p>
+              </div>
             </div>
           );
         })}
