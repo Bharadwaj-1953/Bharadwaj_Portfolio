@@ -5,6 +5,7 @@ const logoMap = {
   "Unical Systems": "/Unical.jpg",
   "SmartInternz": "/SmartBridge.png",
   "Oasis Infobyte": "/Oasis.jpg",
+  "Florida State University": "/FSU 1.png"
 };
 
 const Experience = () => {
