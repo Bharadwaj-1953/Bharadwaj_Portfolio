@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Experience from './components/Experience';
+// import Experience from './components/Experience';
 import Education from './components/Education';
 import Publications from './components/Publications';
 import Footer from './components/Footer';
@@ -13,7 +13,7 @@ const App = () => {
       <Hero />
       <Skills />
       <Projects />
-      <Experience />
+      
       <Education />
       <Publications />
       <Footer />
@@ -22,3 +22,4 @@ const App = () => {
 };
 
 export default App;
+// add experience in Empty block
