@@ -4,7 +4,6 @@ import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 const Hero = () => {
   return (
     <section className="hero-section h-screen relative bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white px-6 md:px-28 flex items-center justify-center">
-
       {/* Logo - Top Left */}
       <div className="absolute top-8 left-12">
         <img
@@ -17,7 +16,7 @@ const Hero = () => {
       {/* Social Icons - Top Right */}
       <div className="absolute top-12 right-16 flex space-x-4 text-white text-xl">
         <a
-          href="mailto:manne.bharadwaj.1953@gmail.com"
+          href="mailto:bharadwajmanne.195@gmail.com"
           className="hover:text-red-400 transition"
         >
           <FaEnvelope />
@@ -50,7 +49,6 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="hero-main max-w-screen-xl w-full flex flex-col md:flex-row items-center justify-between gap-16 mt-20">
-
         {/* Left Text */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-3">
@@ -64,12 +62,13 @@ const Hero = () => {
 
           <div className="text-gray-300 text-base leading-relaxed max-w-3.5xl text-justify space-y-5">
             <p>
-              Systems Engineer specializing in distributed systems, fault tolerance, and high-performance computing. With 3+ years of systems engineering experience and graduate-level research, I've architected decentralized fault detection frameworks achieving 99.5% accuracy, engineered high-performance algorithms delivering 221x speedup, and optimized latency-critical systems reducing communication overhead by 73%.
+              Systems Engineer specializing in distributed systems, fault tolerance, and high-performance computing. With 3+ years of systems engineering experience and graduate-level research, I've architected decentralized fault detection frameworks achieving 99.5% accuracy, engineered high-performance algorithms delivering 221× speedup, and optimized latency-critical systems reducing communication overhead by 73%.
             </p>
             <p>
               I understand systems at every level — from concurrent data structures and RDMA networking to kernel-level debugging and distributed consensus. Currently a Systems Research Engineer at Florida State University where I mentor 8+ developers in systems programming, conduct research on persistent memory and race condition detection, and manage infrastructure supporting 300+ students.
+            </p>
             <p>
-              Passionate about building systems that are fast, reliable, and resilient. Whether designing distributed hash tables with <2% overhead, eliminating synchronization bottlenecks with RDMA, or implementing fault detection mechanisms achieving <150ms response time, I focus on systems that work under extreme conditions.
+              Passionate about building systems that are fast, reliable, and resilient. Whether designing distributed hash tables with &lt;2% overhead, eliminating synchronization bottlenecks with RDMA, or implementing fault detection mechanisms achieving &lt;150ms response time, I focus on systems that work under extreme conditions.
             </p>
           </div>
         </div>
