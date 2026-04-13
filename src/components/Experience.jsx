@@ -2,10 +2,8 @@ import React from "react";
 import experience from "../data/experience";
 
 const logoMap = {
-  "Unical Systems": "/Unical.jpg",
-  "SmartInternz": "/SmartBridge.png",
-  "Oasis Infobyte": "/Oasis.jpg",
   "Florida State University": "/FSU 1.png",
+  "Sri Bharamara Pvt Ltd": "/sri.png",
 };
 
 const Experience = () => {
@@ -42,11 +40,13 @@ const Experience = () => {
                   <div className="relative bg-gray-800/60 p-6 rounded-xl shadow-md transition-transform hover:scale-[1.03] hover:shadow-xl animate-fadeIn">
                     {/* Logo + Info */}
                     <div className="flex flex-col sm:flex-row items-center sm:items-start sm:gap-4 mb-3 text-center sm:text-left">
-                      <img
-                        src={logoSrc}
-                        alt={exp.companyName}
-                        className="w-12 h-12 rounded-md object-contain bg-white p-1 mb-3 sm:mb-0"
-                      />
+                      {logoSrc && (
+                        <img
+                          src={logoSrc}
+                          alt={exp.companyName}
+                          className="w-12 h-12 rounded-md object-contain bg-white p-1 mb-3 sm:mb-0"
+                        />
+                      )}
                       <div>
                         <h3 className="text-lg font-semibold text-indigo-300">
                           {exp.title}
