@@ -1,57 +1,26 @@
 const experience = [
   {
-    title: "Graduate Teaching Assistant",
+    title: "Systems Research Engineer",
     companyName: "Florida State University",
     location: "Tallahassee, FL",
     date: "Aug 2025 - Present",
     points: [
-      "Mentoring students in systems programming, process scheduling, and synchronization mechanisms.",
-      "Managing and automating virtual machine setups for project development using Proxmox.",
-      "Conducting lab sessions and recitations on system calls, timers, and semaphores to enhance practical learning."
-    ]
-  },
-    {
-    title: "Graduate Research Assistant",
-    companyName: "Florida State University",
-    location: "Tallahassee, FL",
-    date: "May 2025 - Present",
-    points: [
-      "Conducting research on concurrency detection, persistent memory, and performance optimization in modern systems.",
-      "Developing LLVM-based instrumentation for synchronization tracing and race-condition analysis.",
-      "Building multi-threaded benchmarking frameworks to evaluate performance and improve system efficiency."
+      "Developed NIFTY, a decentralized fault-tolerance framework achieving 99.5% detection accuracy with less than 3% CPU overhead, supporting 2–8 node clusters using peer-to-peer heartbeat monitoring.",
+      "Engineered MDUAL, a high-performance outlier detection algorithm delivering 221× speedup and 13× memory reduction across 6 real-world datasets with sub-millisecond latency.",
+      "Managed infrastructure supporting 300+ students with 67% overhead reduction on Proxmox cluster with 8+ nodes, utilizing GDB, perf, and valgrind for advanced debugging.",
+      "Mentored 8+ developers in systems programming fundamentals including C++17, concurrency patterns, performance profiling, and distributed debugging techniques."
     ]
   },
   {
-    title: "Cloud Developer Intern",
-    companyName: "Unical Systems",
-    location: "Hyderabad, India",
-    date: "Dec 2023 – Apr 2024",
+    title: "Systems Engineer",
+    companyName: "Sri Bharamara Pvt Ltd",
+    location: "Guntur, India",
+    date: "Jun 2022 – May 2024",
     points: [
-        "Deployed scalable microservices on AWS EC2, S3, and IAM, automating deployment and configuration workflows.",
-        "Containerized applications using Docker and Kubernetes, reducing downtime by 39% and improving scalability.",
-        "Built CI/CD pipelines with Jenkins and Terraform, enhancing integration efficiency and cloud performance."
-    ]
-  },
-  {
-    title: "Applied Data Science Extern",
-    companyName: "SmartInternz",
-    location: "Remote",
-    date: "May 2023 – Jul 2023",
-    points: [
-      "Developed an applied data science pipeline using Python, Pandas, NumPy, and Scikit-learn for large-scale analytics.",
-      "Built and evaluated predictive machine learning models achieving 96% accuracy on real-world datasets.",
-      "Deployed trained models through Flask REST APIs and cloud services, enabling real-time prediction and visualization."
-    ]
-  },
-  {
-    title: "Java Development Intern",
-    companyName: "Oasis Infobyte",
-    location: "Remote",
-    date: "Sep 2022 – Oct 2022",
-    points: [
-      "Designed a payroll management system in Java (Spring Boot + MySQL), improving process efficiency by 47%.",
-      "Implemented secure authentication and RESTful APIs for data management and transactions.",
-      "Performed debugging, unit testing, and optimization to enhance reliability and performance."
+      "Designed and implemented a distributed hash table supporting 4–8 node clusters with near-linear scalability and less than 2% communication overhead using an 11-bit hybrid hash function.",
+      "Optimized RDMA communication over InfiniBand fabric, reducing latency by 73% through one-sided memory access patterns and elimination of synchronization bottlenecks.",
+      "Built resilience mechanisms with less than 150ms failure detection, decentralized log aggregation, Byzantine failure testing, and network partition resilience.",
+      "Conducted comprehensive performance analysis using perf and valgrind profilers, achieving 15–23% efficiency gains through cache-conscious design and multi-hardware benchmarking."
     ]
   }
 ];
