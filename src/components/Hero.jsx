@@ -59,18 +59,17 @@ const Hero = () => {
             </span>
           </h1>
           <h2 className="text-2xl font-semibold text-slate-400 mb-6">
-            Cloud-Native Full Stack Engineer
+            Systems Engineer | Distributed Systems | High-Performance Computing
           </h2>
 
           <div className="text-gray-300 text-base leading-relaxed max-w-3.5xl text-justify space-y-5">
             <p>
-              I’m a software developer specializing in cloud-native architectures and full stack development, with a growing focus on systems engineering and research in concurrency and performance optimization. As a Graduate Teaching and Research Assistant in Computer Science at Florida State University, I mentor students in systems programming and contribute to research on persistent memory, synchronization, and LLVM-based concurrency debugging.
+              Systems Engineer specializing in distributed systems, fault tolerance, and high-performance computing. With 3+ years of systems engineering experience and graduate-level research, I've architected decentralized fault detection frameworks achieving 99.5% accuracy, engineered high-performance algorithms delivering 221x speedup, and optimized latency-critical systems reducing communication overhead by 73%.
             </p>
             <p>
-              My experience spans AWS, GCP, and containerized environments, where I build secure, scalable systems that connect backend to frontend seamlessly. I enjoy working at the intersection of cloud infrastructure, operating systems, and software intelligence — designing solutions that are both practical and research-driven.
-            </p>
+              I understand systems at every level — from concurrent data structures and RDMA networking to kernel-level debugging and distributed consensus. Currently a Systems Research Engineer at Florida State University where I mentor 8+ developers in systems programming, conduct research on persistent memory and race condition detection, and manage infrastructure supporting 300+ students.
             <p>
-              Whether it’s deploying microservices with Kubernetes, implementing tools in LLVM, or crafting responsive web interfaces, I strive to build clean, reliable, and maintainable systems that solve real-world challenges and advance modern computing.
+              Passionate about building systems that are fast, reliable, and resilient. Whether designing distributed hash tables with <2% overhead, eliminating synchronization bottlenecks with RDMA, or implementing fault detection mechanisms achieving <150ms response time, I focus on systems that work under extreme conditions.
             </p>
           </div>
         </div>
