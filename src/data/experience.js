@@ -7,14 +7,6 @@ const experience = [
     points: [
     ]
   },
-   {
-    title: "Graduate Assistant",
-    companyName: "Florida State University",
-    location: "Tallahassee, FL",
-    date: "Aug 2025 - Present",
-    points: [
-    ]
-  },
   {
     title: "Software developer",
     companyName: "Sri Bharamara Pvt Ltd",
