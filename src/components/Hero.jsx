@@ -57,7 +57,7 @@ const Hero = () => {
             </span>
           </h1>
           <h2 className="text-2xl font-semibold text-slate-400 mb-6">
-            Systems Engineer | Distributed Systems | High-Performance Computing
+            Software Developer
           </h2>
 
           <div className="text-gray-300 text-base leading-relaxed max-w-3.5xl text-justify space-y-5">
