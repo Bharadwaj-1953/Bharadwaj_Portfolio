@@ -62,10 +62,10 @@ const Hero = () => {
 
           <div className="text-gray-300 text-base leading-relaxed max-w-3.5xl text-justify space-y-5">
             <p>
-              Systems Engineer specializing in distributed systems, fault tolerance, and high-performance computing. With 3+ years of systems engineering experience and graduate-level research, I've architected decentralized fault detection frameworks achieving 99.5% accuracy, engineered high-performance algorithms delivering 221× speedup, and optimized latency-critical systems reducing communication overhead by 73%.
+              I am a recent graduate from Florida State University with a strong background in computer science and software development. During my time at FSU, I worked as both a Teaching Assistant and Research Assistant, where I supported students, contributed to academic projects, and strengthened my problem-solving and collaboration skills.
             </p>
             <p>
-              I understand systems at every level — from concurrent data structures and RDMA networking to kernel-level debugging and distributed consensus. Currently a Systems Research Engineer at Florida State University where I mentor 8+ developers in systems programming, conduct research on persistent memory and race condition detection, and manage infrastructure supporting 300+ students.
+              Alongside my academic experience, I bring over 3 years of professional experience as a Software Developer. I have worked on designing, developing, and maintaining scalable applications, focusing on writing clean, efficient code and delivering reliable solutions in fast-paced environments.
             </p>
             <p>
               Passionate about building systems that are fast, reliable, and resilient. Whether designing distributed hash tables with &lt;2% overhead, eliminating synchronization bottlenecks with RDMA, or implementing fault detection mechanisms achieving &lt;150ms response time, I focus on systems that work under extreme conditions.
