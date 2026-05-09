@@ -68,7 +68,7 @@ const Hero = () => {
               Alongside my academic experience, I bring over 3 years of professional experience as a Software Developer. I have worked on designing, developing, and maintaining scalable applications, focusing on writing clean, efficient code and delivering reliable solutions in fast-paced environments.
             </p>
             <p>
-              Passionate about building systems that are fast, reliable, and resilient. Whether designing distributed hash tables with &lt;2% overhead, eliminating synchronization bottlenecks with RDMA, or implementing fault detection mechanisms achieving &lt;150ms response time, I focus on systems that work under extreme conditions.
+              I enjoy building impactful software, learning new technologies, and working in collaborative teams to solve real-world problems. I am currently looking for opportunities where I can contribute my skills in software development while continuing to grow as an engineer.
             </p>
           </div>
         </div>
