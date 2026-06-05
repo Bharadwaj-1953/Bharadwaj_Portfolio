@@ -1,19 +1,19 @@
 <h1 align="center">
-👨‍💻 Bharadwaj Manne | Portfolio Website
+Bharadwaj Manne — Personal Portfolio
 </h1>
+
+<p align="center">
+  <strong>Live at:</strong> <a href="https://bharadwaj.vercel.app">bharadwaj.vercel.app</a>
+</p>
 
 ---
 
 ## 📝 Overview
 
 <div align="justify">
-
 This repository hosts the source code of my personal portfolio website, a digital showcase of my professional journey, technical skills, and project work across domains like cloud computing, data science, machine learning, and distributed systems.
 
-The website serves as a one-stop platform for recruiters, collaborators, and fellow developers to learn more about me, explore my project portfolio and get in touch. Built with React.js and Tailwind CSS, it reflects both my technical proficiency and attention to clean, responsive design.
-
-🔗 <strong>Live Portfolio:</strong> [bharadwaj.vercel.app](https://bharadwaj.vercel.app)
-
+The website serves as a one-stop platform for recruiters, collaborators, and fellow developers to learn more about me, explore my project portfolio, and get in touch. Built with React.js and Tailwind CSS, it reflects both my technical proficiency and attention to clean, responsive design.
 </div>
 
 ---
@@ -33,24 +33,26 @@ Bharadwaj_Portfolio/
 ├── package.json         # Project dependencies and metadata
 └── README.md            # Project documentation
 ```
+
 ---
+
 ## 🎯 Key Features
 
-- Professional portfolio with responsive and minimal UI  
-- Skills categorized and displayed using icons for clarity  
-- Detailed project section with GitHub integration  
-- Contact and social links for networking  
-- Fully responsive and optimized for all devices  
-- Deployed using Vercel with CI/CD support  
+- Professional portfolio with responsive and minimal UI
+- Skills categorized and displayed using icons for clarity
+- Detailed project section with GitHub integration
+- Contact and social links for networking
+- Fully responsive and optimized for all devices
+- Deployed using Vercel with CI/CD support
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Frontend**: React.js, Tailwind CSS, Vite  
-- **Hosting**: Vercel  
-- **Styling Tools**: Devicon, Google Fonts (Playfair Display, Inter)  
-- **Version Control**: Git, GitHub  
+- **Frontend**: React.js, Tailwind CSS, Vite
+- **Hosting**: Vercel
+- **Styling Tools**: Devicon, Google Fonts (Playfair Display, Inter)
+- **Version Control**: Git, GitHub
 
 ---
 
@@ -67,16 +69,17 @@ npm install
 # Start the development server
 npm run dev
 ```
+
 Visit [http://localhost:5173](http://localhost:5173) to view the website locally.
 
 ---
 
 ## 📬 Contact
 
-- **Email**: [manne.bharadwaj.1953@gmail.com](mailto:manne.bharadwaj.1953@gmail.com)  
-- **LinkedIn**: [Bharadwaj Manne](https://www.linkedin.com/in/bharadwaj-manne-711476249/)  
+- **Email**: [manne.bharadwaj.1953@gmail.com](mailto:manne.bharadwaj.1953@gmail.com)
+- **LinkedIn**: [Bharadwaj Manne](https://www.linkedin.com/in/bharadwaj-manne-711476249/)
 - **GitHub**: [@Bharadwaj-1953](https://github.com/Bharadwaj-1953)
 
 ---
 
-<p align="center"><i>© 2025 Bharadwaj Manne. All rights reserved.</i></p>
+<p align="center"><i>© 2026 Bharadwaj Manne. All rights reserved.</i></p>
