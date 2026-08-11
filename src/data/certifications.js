@@ -1,3 +1,8 @@
+// Ordered by item count per group of 3 so each grid row has uniform height:
+// Row 1: Microsoft(5), Udemy(4), Cisco(3)
+// Row 2: Google Cloud(3), AWS(3), Academic Programs(3)
+// Row 3: Salesforce(2), Anthropic(2), MathWorks(2)
+
 const certifications = [
   {
     issuer: "Microsoft",
@@ -11,10 +16,31 @@ const certifications = [
     ],
   },
   {
+    issuer: "Udemy",
+    color: "from-purple-500 to-purple-700",
+    items: [
+      "Python Complete Course",
+      "NLP Course for Beginners",
+      "SQL Bootcamp with MySQL, PHP & Python",
+      "JavaScript, PHP & Python Complete Course",
+    ],
+  },
+  {
+    issuer: "Cisco",
+    color: "from-teal-500 to-teal-700",
+    items: [
+      "Cybersecurity Essentials",
+      "Introduction to Cybersecurity",
+      "Introduction to IoT",
+    ],
+  },
+  {
     issuer: "Google Cloud",
     color: "from-red-500 to-yellow-500",
     items: [
       "Associate Cloud Engineer",
+      "Career Readiness - Associate Cloud Engineer Track",
+      "Career Practitioner Pathway",
     ],
   },
   {
@@ -22,6 +48,17 @@ const certifications = [
     color: "from-orange-500 to-orange-700",
     items: [
       "AWS Academy Cloud Foundations",
+      "Introduction to the AWS Cloud",
+      "Introduction to Artificial Intelligence",
+    ],
+  },
+  {
+    issuer: "Academic Programs",
+    color: "from-violet-500 to-violet-700",
+    items: [
+      "Advanced Data Analytics Tools (VIT University)",
+      "Data Science and Advanced Analytics (VIT University)",
+      "Applied Data Science Externship (Google DSC)",
     ],
   },
   {
@@ -41,11 +78,11 @@ const certifications = [
     ],
   },
   {
-    issuer: "Cisco",
-    color: "from-teal-500 to-teal-700",
+    issuer: "MathWorks",
+    color: "from-red-600 to-red-800",
     items: [
-      "Cybersecurity Essentials",
-      "Introduction to Cybersecurity",
+      "MATLAB Onramp",
+      "Optimization Onramp",
     ],
   },
 ];

@@ -1,80 +1,106 @@
-<h1 align="center">
-Bharadwaj Manne — Personal Portfolio
-</h1>
+<h1 align="center">Bharadwaj Manne — Portfolio</h1>
 
 <p align="center">
-  <strong>Live at:</strong> <a href="https://bharadwaj.vercel.app">bharadwaj.vercel.app</a>
+  <strong>Software Engineer · Backend & Distributed Systems</strong>
+</p>
+
+<p align="center">
+  <a href="https://bharadwaj.vercel.app">bharadwaj.vercel.app</a> &nbsp;·&nbsp;
+  <a href="https://github.com/Bharadwaj-1953">GitHub</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/bharadwaj-manne-711476249/">LinkedIn</a>
 </p>
 
 ---
 
-## 📝 Overview
+## Overview
 
-<div align="justify">
-This repository hosts the source code of my personal portfolio website, a digital showcase of my professional journey, technical skills, and project work across domains like cloud computing, data science, machine learning, and distributed systems.
-
-The website serves as a one-stop platform for recruiters, collaborators, and fellow developers to learn more about me, explore my project portfolio, and get in touch. Built with React.js and Tailwind CSS, it reflects both my technical proficiency and attention to clean, responsive design.
-</div>
+Personal portfolio for Bharadwaj Manne, Software Engineer focused on backend and distributed systems. Built with React 18, Vite, Tailwind CSS, and Framer Motion. Features smooth scroll animations, a filterable project section, interactive terminal, and full responsive design across all devices and browsers.
 
 ---
 
-## 📁 Project Structure
+## Tech Stack
 
-```bash
-Bharadwaj_Portfolio/
-├── public/              # Static assets and index.html
-├── src/
-│   ├── components/      # UI components like Navbar, Footer, etc.
-│   ├── pages/           # Home, About, Skills, Projects, Contact
-│   ├── data/            # JSON-based data (projects, skills, etc.)
-│   └── App.jsx          # Root React component
-├── tailwind.config.js   # Tailwind CSS customization
-├── vite.config.js       # Vite build configuration
-├── package.json         # Project dependencies and metadata
-└── README.md            # Project documentation
+| Layer | Technology |
+|---|---|
+| Framework | React 18 + Vite 6 |
+| Styling | Tailwind CSS v3 + Custom CSS |
+| Animations | Framer Motion 13 |
+| Smooth Scroll | Lenis 1.3 |
+| Icons | React Icons, Devicons CDN |
+| Fonts | Syne (display) + Inter (body) + JetBrains Mono — Google Fonts |
+| Deployment | Vercel (auto-deploy on push) |
+
+---
+
+## Sections
+
+- **Hero** — Animated role cycling, macOS-style terminal with live-typed achievements, mouse trail
+- **About** — Bio + animated stat cards (221x speedup, GPA 3.87, 13 projects, 2 publications)
+- **Projects** — 13 projects with filter tabs (Featured / All / Systems / ML / Full-Stack / Cloud), expandable tech tags
+- **Experience** — Timeline of 6 professional roles across FSU, Sri Bhramara, Unical Systems, Oasis Infobyte
+- **Skills** — 9 tabbed categories with 70+ technologies, hover tooltips
+- **Education** — FSU MS CS (GPA 3.87) + VIT-AP BTech (GPA 9.38)
+- **Certifications** — 9 issuer groups: Microsoft, Google Cloud, AWS, Salesforce, Anthropic, Cisco, MathWorks, Udemy, Academic Programs
+- **Publications** — IEEE paper (DTFAAEC) + IPO India patent
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   ├── Experience.jsx
+│   ├── Skills.jsx
+│   ├── Education.jsx
+│   ├── Certifications.jsx
+│   ├── Publications.jsx
+│   ├── Footer.jsx
+│   ├── AnimatedSection.jsx
+│   └── MouseTrail.jsx
+├── data/
+│   ├── projects.js
+│   ├── skills.js
+│   ├── experience.js
+│   └── certifications.js
+├── App.jsx
+└── index.css
+public/
+├── Bharadwaj_Manne.jpg
+├── bm-logo.png
+└── [institution logos]
 ```
 
 ---
 
-## 🎯 Key Features
-
-- Professional portfolio with responsive and minimal UI
-- Skills categorized and displayed using icons for clarity
-- Detailed project section with GitHub integration
-- Contact and social links for networking
-- Fully responsive and optimized for all devices
-- Deployed using Vercel with CI/CD support
-
----
-
-## 🛠️ Technologies Used
-
-- **Frontend**: React.js, Tailwind CSS, Vite
-- **Hosting**: Vercel
-- **Styling Tools**: Devicon, Google Fonts (Playfair Display, Inter)
-- **Version Control**: Git, GitHub
-
----
-
-## 🚀 Running Locally
+## Running Locally
 
 ```bash
-# Clone the repository
 git clone https://github.com/Bharadwaj-1953/Bharadwaj_Portfolio.git
 cd Bharadwaj_Portfolio
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm run dev
 ```
 
-Visit [http://localhost:5173](http://localhost:5173) to view the website locally.
+Open [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 📬 Contact
+## Build for Production
+
+```bash
+npm run build
+```
+
+Output in `dist/`. Deployed automatically to Vercel on every push to `main`.
+
+---
+
+## Contact
 
 - **Email**: [manne.bharadwaj.1953@gmail.com](mailto:manne.bharadwaj.1953@gmail.com)
 - **LinkedIn**: [Bharadwaj Manne](https://www.linkedin.com/in/bharadwaj-manne-711476249/)
@@ -82,4 +108,4 @@ Visit [http://localhost:5173](http://localhost:5173) to view the website locally
 
 ---
 
-<p align="center"><i>© 2026 Bharadwaj Manne. All rights reserved.</i></p>
+<p align="center"><i>&copy; 2026 Bharadwaj Manne. All rights reserved.</i></p>

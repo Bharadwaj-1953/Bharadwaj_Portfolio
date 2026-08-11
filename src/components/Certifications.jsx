@@ -1,37 +1,44 @@
-import React from "react";
-import certifications from "../data/certifications";
+import React from 'react';
+import certifications from '../data/certifications';
+import AnimatedSection from './AnimatedSection';
 
-const Certifications = () => {
+export default function Certifications() {
   return (
-    <section className="py-20 px-6 md:px-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-slate-300">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-        Certifications
-      </h2>
+    <section className="py-24 md:py-32 bg-zinc-950">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-[1270px] mx-auto">
-        {certifications.map((cert, index) => (
-          <div
-            key={index}
-            className="bg-gray-800/60 rounded-xl shadow-md p-5 transition-transform hover:scale-[1.03] hover:shadow-xl"
-          >
-            <div
-              className={`inline-block text-xs font-bold text-white px-3 py-1 rounded-full mb-4 bg-gradient-to-r ${cert.color}`}
-            >
-              {cert.issuer}
-            </div>
-            <ul className="space-y-2">
-              {cert.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-slate-300">
-                  <span className="mt-[7px] w-[5px] h-[5px] rounded-full bg-indigo-400 shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <AnimatedSection>
+          <p className="text-indigo-400 font-mono text-xs tracking-[0.2em] uppercase mb-3">
+            Credentials
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-zinc-100 mb-12">
+            Certifications
+          </h2>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {certifications.map((cert, i) => (
+            <AnimatedSection key={cert.issuer} delay={i * 0.07}>
+              <div className="bg-zinc-900/50 border border-zinc-800/60 rounded-2xl p-6 hover:border-zinc-700/70 hover:bg-zinc-900/70 transition-all duration-300 h-full">
+                <span
+                  className={`inline-block text-xs font-bold text-white px-3 py-1.5 rounded-full mb-5 bg-gradient-to-r ${cert.color}`}
+                >
+                  {cert.issuer}
+                </span>
+                <ul className="space-y-2.5">
+                  {cert.items.map(item => (
+                    <li key={item} className="flex items-start gap-2.5">
+                      <span className="w-1 h-1 rounded-full bg-indigo-500/70 mt-2 shrink-0" />
+                      <span className="text-sm text-zinc-400 leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default Certifications;
+}

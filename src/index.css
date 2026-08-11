@@ -2,130 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hero Section */
-@media (max-width: 768px) {
-  .hero-section {
-    height: auto;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-  }
-
-  .hero-main {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    margin-top: 6rem;
-  }
-
-  .hero-image {
-    margin-left: 0;
-  }
-
-  .hero-image img {
-    max-height: 320px;
-    width: 80%;
-  }
+/* ── Base ─────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Projects Section */
-@media (max-width: 768px) {
-  .projects-section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr; /* stack vertically */
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-
-  .project-card {
-    padding: 1.5rem;
-  }
-
-  .project-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-card p,
-  .project-card li {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .project-card span {
-    font-size: 0.8rem;
-  }
+html {
+  background-color: #09090b;
+  color: #fafafa;
+  scroll-behavior: auto;
+  overflow-x: hidden;
 }
 
-/* Publications Section */
-@media (max-width: 768px) {
-  .publications-section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-
-  .publications-grid {
-    grid-template-columns: 1fr; /* Stack vertically */
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-
-  .publication-card {
-    padding: 1.5rem;
-  }
-
-  .publication-card h3 {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .publication-card p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    text-align: justify;
-  }
-
-  .publication-card span {
-    font-size: 0.8rem;
-  }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
 }
 
-/* Skills Section */
-@media (max-width: 768px) {
-  .skills-section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', system-ui, sans-serif;
+}
 
-  .skills-grid {
-    grid-template-columns: 1fr; /* Stack categories vertically */
-    gap: 2rem;
-    padding: 0 1rem;
-  }
+/* ── dvh fallback: 100vh for Safari < 15.4, 100dvh for modern ─── */
+#hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
 
-  .skills-card {
-    padding: 1.5rem;
-  }
+/* ── Lenis smooth scroll ──────────────────────────────────────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
 
-  .skills-card h3 {
-    font-size: 1.1rem;
-    text-align: center;
-  }
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
 
-  .skill-box {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
 
-  .skill-box img {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
+/* ── Scrollbar (Chrome / Edge / Opera) ────────────────────────── */
+::-webkit-scrollbar {
+  width: 3px;
+}
 
-  .skill-box span {
-    font-size: 9px;
-  }
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* ── Selection ────────────────────────────────────────────────── */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fafafa;
+}
+
+/* ── Hero dot grid ────────────────────────────────────────────── */
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+/* ── Gradient text (WebKit + standard) ────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #e4e4e7 0%, #a5b4fc 55%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* non-webkit fallback */
+}
+
+/* ── Backdrop blur Safari fix ─────────────────────────────────── */
+.backdrop-blur-fallback {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* ── Framer Motion: prevent layout shift on iOS during animation ─ */
+[data-framer-component-type] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
