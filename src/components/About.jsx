@@ -8,7 +8,7 @@ const stats = [
   { value: '2', label: 'Publications', sub: 'IEEE + IPO India Patent' },
 ];
 
-const tags = ['Python', 'C++', 'C', 'Java', 'TypeScript', 'Distributed Systems', 'RDMA', 'MPI', 'InfiniBand', 'QEMU'];
+const tags = ['Python', 'C++', 'C', 'Java', 'TypeScript', 'SQL', 'Distributed Systems', 'RDMA', 'MPI', 'InfiniBand', 'QEMU', 'SSIS', 'ServiceNow', 'Salesforce'];
 
 export default function About() {
   return (
@@ -41,6 +41,11 @@ export default function About() {
                 hardware, and enough research background to know when the "obvious" fix is
                 actually a workaround. I'd rather understand why something fails than patch
                 around it.
+              </p>
+              <p>
+                Currently at the Florida Department of Children &amp; Families, building
+                Python and SQL automation pipelines, SSIS workflows, and data systems
+                that support child welfare programs and federal compliance reporting.
               </p>
               <p>
                 Certified across AWS, GCP, and Azure. Comfortable moving between

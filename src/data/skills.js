@@ -1,5 +1,22 @@
 const skills = [
   {
+    title: "Featured",
+    items: [
+      { name: "Python",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "C++",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+      { name: "Java",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "AWS",        icon: "https://img.icons8.com/color/48/000000/amazon-web-services.png" },
+      { name: "Docker",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+      { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+      { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "Redis",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+      { name: "React",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Linux",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+      { name: "Git",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    ],
+  },
+  {
     title: "Languages & Programming",
     items: [
       { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
@@ -95,6 +112,21 @@ const skills = [
       { name: "Power BI", icon: "https://img.icons8.com/color/48/power-bi.png" },
       { name: "GIS", icon: "https://img.icons8.com/color/48/geography.png" },
       { name: "Excel", icon: "https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" },
+    ],
+  },
+  {
+    title: "Enterprise & Government Platforms",
+    items: [
+      { name: "Salesforce", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" },
+      { name: "ServiceNow", icon: "/icons/servicenow.svg" },
+      { name: "SharePoint", icon: "https://img.icons8.com/color/48/microsoft-sharepoint-2019.png" },
+      { name: "Power Apps", icon: "/icons/powerapps.png" },
+      { name: "Power\nAutomate", icon: "/icons/powerautomate.png" },
+      { name: "Cherwell\n(Ivanti)", icon: "/icons/ivanti.svg" },
+      { name: "SSIS", icon: "https://img.icons8.com/color/48/microsoft-sql-server.png" },
+      { name: "SSMS", icon: "/icons/ssms.png" },
+      { name: "FSFN", icon: "https://img.icons8.com/color/48/family.png" },
+      { name: "CCWIS", icon: "https://img.icons8.com/color/48/certificate.png" },
     ],
   },
   {

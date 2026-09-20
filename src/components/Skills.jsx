@@ -8,7 +8,7 @@ export default function Skills() {
   const active = skills[activeIdx];
 
   return (
-    <section className="py-24 md:py-32 bg-zinc-950">
+    <section id="skills" className="py-24 md:py-32 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         <AnimatedSection>
@@ -65,7 +65,17 @@ export default function Skills() {
                         alt={item.name.replace('\n', ' ')}
                         className="w-8 h-8 object-contain"
                         loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.nextSibling.style.display = 'flex';
+                        }}
                       />
+                      <span
+                        className="w-8 h-8 rounded-lg bg-zinc-700 text-zinc-300 text-[9px] font-bold items-center justify-center text-center leading-tight hidden"
+                        aria-hidden="true"
+                      >
+                        {item.name.replace('\n', ' ').slice(0, 3)}
+                      </span>
                       <span className="text-[10px] text-zinc-400 text-center leading-tight whitespace-pre-line font-mono group-hover:text-zinc-200 transition-colors duration-200">
                         {item.name}
                       </span>

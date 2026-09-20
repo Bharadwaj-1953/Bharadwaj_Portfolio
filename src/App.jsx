@@ -4,12 +4,12 @@ import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Education from './components/Education';
-import Certifications from './components/Certifications';
 import Publications from './components/Publications';
+import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 import MouseTrail from './components/MouseTrail';
 
@@ -45,12 +45,12 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Projects />
         <Experience />
         <Skills />
+        <Projects />
         <Education />
-        <Certifications />
         <Publications />
+        <Certifications />
       </main>
       <Footer />
     </div>
