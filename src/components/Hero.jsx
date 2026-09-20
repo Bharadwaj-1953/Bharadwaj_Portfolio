@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const roles = [
+  'Software Engineer',
   'Backend Engineer',
+  'Systems Engineer',
   'Distributed Systems',
-  'Systems Programmer',
   'Research Engineer',
 ];
 

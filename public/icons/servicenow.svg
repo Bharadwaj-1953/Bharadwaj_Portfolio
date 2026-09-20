@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="14" fill="#293E40"/>
+  <text x="50" y="44" font-family="Arial Black, Arial" font-weight="900" font-size="22" fill="#62D84E" text-anchor="middle" letter-spacing="1">NOW</text>
+  <text x="50" y="68" font-family="Arial, sans-serif" font-weight="400" font-size="11" fill="#8FA89A" text-anchor="middle" letter-spacing="2">PLATFORM</text>
+</svg>
