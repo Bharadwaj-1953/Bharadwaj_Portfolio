@@ -1,5 +1,5 @@
 // Ordered by item count per group of 3 so each grid row has uniform height:
-// Row 1: Microsoft(5), Udemy(4), Cisco(3)
+// Row 1: Microsoft(6), Udemy(4), Cisco(3)
 // Row 2: Google Cloud(3), AWS(3), Academic Programs(3)
 // Row 3: Salesforce(2), Anthropic(2), MathWorks(2)
 
@@ -8,6 +8,7 @@ const certifications = [
     issuer: "Microsoft",
     color: "from-blue-500 to-blue-700",
     items: [
+      "Fabric Data Engineer Associate",
       "SQL AI Developer Associate",
       "Azure AI Fundamentals",
       "Azure Data Fundamentals",

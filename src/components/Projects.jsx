@@ -7,6 +7,8 @@ import AnimatedSection from './AnimatedSection';
 const categories = ['Featured', 'All', 'Systems', 'ML', 'Full-Stack', 'Cloud'];
 
 const projectMeta = {
+  'EoMT - Panoptic Image Segmentation and Ablation Analysis':
+    { category: 'ML', featured: false },
   'PMTrace - Persistent Memory File System Bug Detection Framework':
     { category: 'Systems', featured: true },
   'DriftScope - High-Performance Data Stream Outlier Detection Engine':

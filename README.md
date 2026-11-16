@@ -35,10 +35,10 @@ Personal portfolio for Bharadwaj Manne, Software Engineer focused on backend and
 ## Sections
 
 - **Hero** — Animated role cycling, macOS-style terminal with live-typed achievements, mouse trail
-- **About** — Bio + animated stat cards (221x speedup, GPA 3.87, 13 projects, 2 publications)
-- **Projects** — 13 projects with filter tabs (Featured / All / Systems / ML / Full-Stack / Cloud), expandable tech tags
-- **Experience** — Timeline of 6 professional roles across FSU, Sri Bhramara, Unical Systems, Oasis Infobyte
-- **Skills** — 9 tabbed categories with 70+ technologies, hover tooltips
+- **About** — Bio + animated stat cards (221x speedup, GPA 3.87, 14 projects, 2 publications)
+- **Projects** — 14 projects with filter tabs (Featured / All / Systems / ML / Full-Stack / Cloud), expandable tech tags
+- **Experience** — Timeline of 8 professional roles across Florida DCF, FSU, Sri Bhramara, Unical Systems, and Oasis Infobyte
+- **Skills** — 10 tabbed categories with technology icons and labels
 - **Education** — FSU MS CS (GPA 3.87) + VIT-AP BTech (GPA 9.38)
 - **Certifications** — 9 issuer groups: Microsoft, Google Cloud, AWS, Salesforce, Anthropic, Cisco, MathWorks, Udemy, Academic Programs
 - **Publications** — IEEE paper (DTFAAEC) + IPO India patent
@@ -79,10 +79,12 @@ public/
 
 ## Running Locally
 
+Use Node.js 22.
+
 ```bash
 git clone https://github.com/Bharadwaj-1953/Bharadwaj_Portfolio.git
 cd Bharadwaj_Portfolio
-npm install
+npm ci
 npm run dev
 ```
 
@@ -97,6 +99,10 @@ npm run build
 ```
 
 Output in `dist/`. Deployed automatically to Vercel on every push to `main`.
+
+For maintenance, use `npm update` for updates within the current version ranges,
+then run `npm audit` and `npm run build`. Major framework upgrades should be
+reviewed separately to preserve the existing styling and animation behavior.
 
 ---
 

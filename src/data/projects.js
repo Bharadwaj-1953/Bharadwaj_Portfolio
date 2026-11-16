@@ -1,5 +1,18 @@
 const projects = [
   {
+    title: "EoMT - Panoptic Image Segmentation and Ablation Analysis",
+    description:
+      "Built an evaluation framework around pretrained EoMT with a DINOv2 backbone, reproducing 46.74 PQ across 5,000 COCO 2017 validation images. Analyzed query count, query insertion depth, and attention masking through controlled inference-time ablations.",
+    features: [
+      "Reproduced 46.74 PQ on full COCO validation and measured a 1.06-point PQ decrease with full attention masking.",
+    ],
+    technologies: [
+      "Python", "PyTorch", "Computer Vision", "Deep Learning",
+      "Vision Transformers (ViT)", "DINOv2", "Image Segmentation", "Docker",
+    ],
+    github: "https://github.com/Bharadwaj-1953/EoMT-Panoptic-Segmentation",
+  },
+  {
     title: "PMTrace - Persistent Memory File System Bug Detection Framework",
     description:
       "Automated bug detection framework leveraging PM file system consistency mechanisms to generate crash plans and validate correctness across NOVA, PMFS, and WineFS. Built on research published at USENIX FAST '25.",

@@ -98,6 +98,10 @@ const skills = [
       { name: "Scikit-Learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
       { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
       { name: "Hugging\nFace", icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
+      { name: "Computer\nVision", icon: "/icons/computer-vision.svg" },
+      { name: "Panoptic\nSegmentation", icon: "/icons/panoptic-segmentation.svg" },
+      { name: "Vision\nTransformers (ViT)", icon: "/icons/vision-transformers.svg" },
+      { name: "Model Evaluation", icon: "/icons/model-evaluation.svg" },
     ],
   },
   {

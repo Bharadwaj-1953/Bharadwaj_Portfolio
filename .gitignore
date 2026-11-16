@@ -1,5 +1,12 @@
 node_modules/
 dist/
 .env
-node_modules/
-dist/
+.env.*
+!.env.example
+.vercel/
+.claude/
+.github/
+.nvmrc
+vercel.json
+eslint.config.mjs
+scripts/smoke-test.mjs
