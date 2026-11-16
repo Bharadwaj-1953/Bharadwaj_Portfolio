@@ -29,6 +29,22 @@ function getDateRange(roles) {
   return `${earliest} – ${latest}`;
 }
 
+function RoleDetails({ role, showLocation = false }) {
+  const details = [role.date, ...(showLocation ? [role.location] : []),
+    ...(role.type ? role.type.split('·').map(detail => detail.trim()) : [])];
+
+  return (
+    <div className={`flex flex-wrap items-center gap-x-2 gap-y-0.5${showLocation ? ' mt-1' : ''}`}>
+      {details.map((detail, index) => (
+        <span key={index} className="inline-flex items-center gap-x-2 whitespace-nowrap">
+          {index > 0 && <span aria-hidden="true" className="text-zinc-700 text-xs">·</span>}
+          <span className={`text-xs text-zinc-500${index === 0 ? ' font-mono' : ''}`}>{detail}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function Experience() {
   const groups = groupByCompany(experience);
 
@@ -93,17 +109,9 @@ export default function Experience() {
                                 <div key={ri} className="relative">
                                   <div className="absolute -left-[1.43rem] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 border-2 border-indigo-500/60" />
                                   <p className="text-sm font-semibold text-zinc-200 mb-1">{role.title}</p>
-                                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mb-3">
-                                    <span className="text-xs text-zinc-500 font-mono">{role.date}</span>
-                                    {role.type && (
-                                      <>
-                                        <span className="text-zinc-700 text-xs">·</span>
-                                        <span className="text-xs text-zinc-500">{role.type}</span>
-                                      </>
-                                    )}
-                                  </div>
-                                  {role.points.length > 0 && (
-                                    <ul className="space-y-2">
+                                  <RoleDetails role={role} />
+                                  {role.points?.length > 0 && (
+                                    <ul className="mt-3 space-y-2">
                                       {role.points.map((point, pi) => (
                                         <li key={pi} className="flex items-start gap-3">
                                           <span className="w-1 h-1 rounded-full bg-indigo-500/70 mt-2 shrink-0" />
@@ -120,7 +128,7 @@ export default function Experience() {
                       ) : (
                         /* Single role: everything in one block, no divider */
                         <div className="p-6">
-                          <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-4">
+                          <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                             {logo && (
                               <img
                                 src={logo}
@@ -133,22 +141,12 @@ export default function Experience() {
                                 {group.roles[0].title}
                               </h3>
                               <p className="text-sm text-zinc-400 mt-0.5">{group.companyName}</p>
-                              <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-1">
-                                <span className="text-xs text-zinc-500 font-mono">{group.roles[0].date}</span>
-                                <span className="text-zinc-700 text-xs">·</span>
-                                <span className="text-xs text-zinc-500">{group.roles[0].location}</span>
-                                {group.roles[0].type && (
-                                  <>
-                                    <span className="text-zinc-700 text-xs">·</span>
-                                    <span className="text-xs text-zinc-500">{group.roles[0].type}</span>
-                                  </>
-                                )}
-                              </div>
+                              <RoleDetails role={group.roles[0]} showLocation />
                             </div>
                           </div>
 
-                          {group.roles[0].points.length > 0 && (
-                            <ul className="space-y-2.5">
+                          {group.roles[0].points?.length > 0 && (
+                            <ul className="mt-4 space-y-2.5">
                               {group.roles[0].points.map((point, pi) => (
                                 <li key={pi} className="flex items-start gap-3">
                                   <span className="w-1 h-1 rounded-full bg-indigo-500/70 mt-2 shrink-0" />

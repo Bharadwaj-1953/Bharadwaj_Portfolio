@@ -1,10 +1,11 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
+import projects from '../data/projects';
 
 const stats = [
   { value: '221x', label: 'Speedup over SOTA', sub: 'DriftScope · C++17' },
   { value: '3.87', label: 'GPA at FSU', sub: 'Computer Science' },
-  { value: '13', label: 'GitHub Projects', sub: 'Systems · ML · Cloud · Full-Stack' },
+  { value: String(projects.length), label: 'GitHub Projects', sub: 'Systems · ML · Cloud · Full-Stack' },
   { value: '2', label: 'Publications', sub: 'IEEE + IPO India Patent' },
 ];
 

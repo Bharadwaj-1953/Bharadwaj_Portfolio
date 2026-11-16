@@ -110,6 +110,13 @@ export default function Navbar() {
           </a>
         </div>
       </div>
+      <nav aria-label="Mobile sections" className="md:hidden flex gap-1 overflow-x-auto px-4 pb-2">
+        {navLinks.map(link => (
+          <a key={link.href} href={link.href} className="shrink-0 px-3 py-2 text-xs text-zinc-400 hover:text-zinc-100 rounded-lg hover:bg-zinc-800/60">
+            {link.label}
+          </a>
+        ))}
+      </nav>
     </motion.header>
   );
 }
