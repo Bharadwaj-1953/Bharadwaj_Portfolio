@@ -2,9 +2,11 @@ const projects = [
   {
     title: "EoMT - Panoptic Image Segmentation and Ablation Analysis",
     description:
-      "Built an evaluation framework around pretrained EoMT with a DINOv2 backbone, reproducing 46.74 PQ across 5,000 COCO 2017 validation images. Analyzed query count, query insertion depth, and attention masking through controlled inference-time ablations.",
+      "Reproduced a panoptic segmentation benchmark with pretrained EoMT and DINOv2, then measured how query design and attention affected quality.",
     features: [
-      "Reproduced 46.74 PQ on full COCO validation and measured a 1.06-point PQ decrease with full attention masking.",
+      "Matched the official benchmark with 46.74 panoptic quality (PQ) on all 5,000 COCO 2017 validation images.",
+      "On a 500-image ablation set, 100 object queries reduced PQ by 7.29 points and two query-processing blocks reduced it by 18.94 points.",
+      "Full attention masking scored 45.68 PQ versus 46.74 on the full validation set. Docker configurations and automated tests support reproduction.",
     ],
     technologies: [
       "Python", "PyTorch", "Computer Vision", "Deep Learning",
@@ -15,11 +17,11 @@ const projects = [
   {
     title: "PMTrace - Persistent Memory File System Bug Detection Framework",
     description:
-      "Automated bug detection framework leveraging PM file system consistency mechanisms to generate crash plans and validate correctness across NOVA, PMFS, and WineFS. Built on research published at USENIX FAST '25.",
+      "Built a crash-testing framework for persistent-memory file systems, based on research published at USENIX FAST ’25.",
     features: [
-      "Automated crash plan generation using consistency mechanism-aware analysis across three PM file systems.",
-      "Reproduced and validated six real-world bugs using QEMU/KVM-based isolated VM infrastructure.",
-      "Scalability evaluation across ACE-seq2 and ACE-seq3 workloads with up to 20 concurrent VMs.",
+      "Generated crash plans and reproduced six real-world bugs in NOVA, PMFS, and WineFS using isolated QEMU/KVM virtual machines.",
+      "Compared Silhouette, 2CP, and Invariants+Comb while tracking in-flight stores and duplicate fences.",
+      "Evaluated ACE-seq2 and ACE-seq3 workloads with up to 20 concurrent VMs.",
     ],
     technologies: [
       "Python", "Shell Scripting", "QEMU/KVM", "C++", "Linux",
@@ -31,11 +33,11 @@ const projects = [
   {
     title: "DriftScope - High-Performance Data Stream Outlier Detection Engine",
     description:
-      "High-performance outlier detection engine exploiting duality between data and queries to eliminate redundant computation, achieving 221x speedup and 13x memory reduction over state-of-the-art methods.",
+      "Built a C++17 engine that detects outliers in live streams by eliminating repeated distance calculations across similar queries.",
     features: [
-      "Novel duality-based algorithm groups similar queries with nearby data points, eliminating redundant distance computations.",
-      "221x speedup and 13x memory reduction over SOP and pMCSKY on six benchmark datasets.",
-      "Supports dynamic, continuously evolving multi-query outlier detection in real-time data streams.",
+      "Benchmarks across six datasets showed a 221× speedup and 13× lower memory use compared with SOP and pMCSKY.",
+      "Grouped nearby data points with similar queries and prioritized groups for incremental updates.",
+      "Tested on datasets ranging from one-dimensional stock data to 55-dimensional forest-cover data.",
     ],
     technologies: [
       "C++17", "C++", "Streaming", "Real-time Processing", "Linux",
@@ -47,11 +49,11 @@ const projects = [
   {
     title: "InfinixCore - Distributed Computing Engine via InfiniBand and RDMA",
     description:
-      "Distributed word-count engine using InfiniBand RDMA and a custom 11-bit DHT for near-linear scalability with minimal communication overhead, tested on datasets from 1MB to 1GB.",
+      "Built an InfiniBand-based distributed word-count engine using a custom hash table and direct remote memory access.",
     features: [
-      "Custom 11-bit hybrid DHT partitions the key space across nodes with RDMA Read for zero-overhead remote lookups.",
-      "MPI-based coordination with atomic operations ensuring concurrent consistency across all distributed processes.",
-      "Near-linear scalability validated on datasets from 1MB to 1GB on InfiniBand clusters.",
+      "Partitioned keys across nodes with an 11-bit hybrid hash and used one-sided RDMA Read and Write for lookups and updates.",
+      "Coordinated concurrent updates with MPI and atomic operations.",
+      "Observed near-linear scaling on datasets from 1 MB to 1 GB.",
     ],
     technologies: [
       "C", "MPI", "RDMA", "InfiniBand", "DHT",
@@ -63,11 +65,10 @@ const projects = [
   {
     title: "PeerGuard - Decentralized Fault Tolerance and Network Partition Detection",
     description:
-      "Decentralized P2P fault detection framework achieving 99.5% accuracy and under 3% CPU overhead with no central controller dependency, tested across 2 to 8 node environments.",
+      "Built a peer-to-peer monitor that detects node failures and network partitions without a central controller.",
     features: [
-      "Fully decentralized P2P architecture with heartbeat-based failure detection and per-node real-time traffic logging.",
-      "99.5% fault detection accuracy with under 3% CPU overhead across 2 to 8 node environments.",
-      "Automated deployment via password-less SSH with dynamic MAC/IP config generation.",
+      "Combined configurable heartbeat thresholds with local traffic monitoring and per-node logging.",
+      "Measured 99.5% detection accuracy and under 3% CPU overhead in tests across 2–8 nodes with induced partitions.",
     ],
     technologies: [
       "C++", "Shell Scripting", "SSH", "Linux",
@@ -79,11 +80,10 @@ const projects = [
   {
     title: "NexusMPI - Scalable Distributed Processing Engine via MPI and Docker",
     description:
-      "MPI-based parallel text analytics engine benchmarking word and character frequency analysis across native Linux and Dockerized environments, from 1 to 8 concurrent processes.",
+      "Benchmarked parallel text analytics on native Linux and in Docker to measure the effect of containerization on MPI workloads.",
     features: [
-      "Parallel word and character frequency analysis using OpenMPI across 1 to 8 distributed processes.",
-      "Dockerized setup with Docker Compose for isolated, reproducible parallel execution environments.",
-      "Benchmarked native Linux vs. containerized execution to quantify overhead of MPI inside Docker.",
+      "Measured word and character frequency workloads at 1, 2, 4, 6, and 8 MPI processes in both environments.",
+      "Made the deployment reproducible with Docker Compose, dynamic host mapping, and automated SSH configuration.",
     ],
     technologies: [
       "Python", "OpenMPI", "MPI", "Docker", "Docker Compose",
@@ -95,11 +95,11 @@ const projects = [
   {
     title: "AtlasSync - AI-Powered Collaborative Travel Planning Platform",
     description:
-      "Full-stack AI travel platform with real-time group voting, AI-generated itineraries, and per-person cost splitting. Built with Next.js 16, Supabase, and deployed live on Vercel.",
+      "Built a collaborative trip planner where groups vote on destinations, generate itineraries, and split expenses.",
     features: [
-      "Real-time group destination voting with live leaderboard and AI-generated day-by-day itineraries.",
-      "Per-person cost breakdown across flights, hotels, activities, and food with split tracking.",
-      "Next.js 16, React 19, TypeScript, Tailwind CSS v4, Supabase with Row Level Security, deployed on Vercel.",
+      "Updated destination votes and leaderboards in real time and generated day-by-day itineraries for the winning destination.",
+      "Split flight, hotel, activity, and food costs by traveler.",
+      "Used Supabase Auth and row-level security for access control, with automated Vercel deployments.",
     ],
     technologies: [
       "Next.js", "React", "TypeScript", "Tailwind CSS",
@@ -111,11 +111,11 @@ const projects = [
   {
     title: "BirthViz - Interactive Florida Medicaid Analytics Dashboard",
     description:
-      "Zero-dependency interactive dashboard transforming 860,000+ Florida Medicaid birth records into D3 choropleth maps and multi-dimensional analytics. Entire app ships in a single HTML file.",
+      "Turned over 860,000 Florida Medicaid birth records into an interactive dashboard for exploring C-section trends.",
     features: [
-      "Interactive D3 choropleth map across all 11 Florida Medicaid service regions with multi-dimensional age drill-down.",
-      "Tracked statewide C-section rates from a 2017 peak of 22.1% down to 17.7% in 2023.",
-      "Zero dependencies - no framework, no build step, no server required. Opens in any browser.",
+      "Tracked statewide C-section rates from 22.1% in 2017 to 17.7% in 2023.",
+      "Mapped 11 service regions with D3 and TopoJSON, revealing a persistent gap of more than 10 percentage points and allowing breakdowns by age.",
+      "Integrated five Excel worksheets and a region-to-county crosswalk covering all 67 counties.",
     ],
     technologies: [
       "JavaScript", "D3.js", "Chart.js", "TopoJSON",
@@ -127,16 +127,16 @@ const projects = [
   {
     title: "ApexFlow - Machine Learning-Based F1 Driver Behavior Analysis",
     description:
-      "ML system classifying 75 years of F1 driver history into behavioral archetypes using K-Means, DBSCAN, Hierarchical Clustering, and PCA on 26,759 race records.",
+      "Analyzed 75 years of Formula 1 results to identify driver behavior patterns across 26,759 race records.",
     features: [
-      "Classified drivers into three archetypes: Consistent Climbers, Midfield Stabilizers, and Volatile Drivers.",
-      "Random Forest with 5-fold cross-validation achieved 37.9% improvement over baseline (MAE 2.567).",
-      "7 behavioral metrics validated via permutation tests (p=0.000) and chi-square analysis, validated against 2024 data.",
+      "Compared K-means, DBSCAN, and hierarchical clustering after PCA and identified three driver archetypes.",
+      "Random Forest reduced error by 37.9% versus baseline with five-fold cross-validation (MAE 2.567).",
+      "Validated seven behavioral metrics and tested the analysis against 2024 race data.",
     ],
     technologies: [
-      "Python", "Scikit-Learn", "K-Means", "DBSCAN",
+      "Python", "scikit-learn", "K-Means", "DBSCAN",
       "Hierarchical Clustering", "PCA", "Random Forest",
-      "Pandas", "NumPy", "Matplotlib", "Jupyter",
+      "pandas", "NumPy", "Matplotlib", "Jupyter",
       "fastf1", "Statistical Analysis", "Git",
     ],
     github: "https://github.com/Bharadwaj-1953/ApexFlow",
@@ -144,32 +144,30 @@ const projects = [
   {
     title: "MediFlow - Cloud-Native Medical Data Integration and Mining System",
     description:
-      "Privacy-aware healthcare platform using Locality Sensitive Hashing for distributed medical record fusion across a 4-module role-based architecture, deployed on AWS EC2 with S3 storage.",
+      "Built an AWS-hosted healthcare prototype that links records across sources using locality-sensitive hashing.",
     features: [
-      "4-module system (Admin, Doctor, Patient, IOH) with LSH for privacy-preserving multi-source record fusion.",
-      "Deployed on AWS EC2 with S3-backed storage, MySQL persistence, and role-based access control.",
-      "Flask and Python backend with authentication, session management, and automated shell-script environment setup.",
+      "Organized the application into admin, doctor, patient, and IOH modules with role-based access.",
+      "Ran the Flask backend on EC2 with S3 and MySQL, and scripted the environment setup.",
     ],
     technologies: [
       "Python", "Flask", "AWS EC2", "AWS S3", "MySQL",
       "LSH", "HTML5", "CSS", "Bootstrap", "JavaScript",
-      "Pandas", "NumPy", "SMTP", "Ubuntu", "Shell Scripting", "Git",
+      "pandas", "NumPy", "SMTP", "Ubuntu", "Shell Scripting", "Git",
     ],
     github: "https://github.com/Bharadwaj-1953/MediFlow",
   },
   {
     title: "FarmOracle - Precision Crop Recommendation Engine",
     description:
-      "Crop recommendation engine benchmarking five ML classifiers on 2,200 agricultural records, with Random Forest achieving 99.24% accuracy across 22 crop categories and Flask deployment.",
+      "Built a crop recommendation model using soil and environmental measurements from 2,200 records.",
     features: [
-      "Benchmarked SVM, KNN, Logistic Regression, Decision Tree, and Random Forest on soil and climate features.",
-      "Random Forest achieved 99.24% accuracy across 22 crop categories with MinMaxScaler normalization.",
-      "Flask-based deployment with label encoding and serialized model for real-world precision agriculture use.",
+      "Benchmarked five classifiers across 22 crop categories. Random Forest reached 99.24% classification accuracy.",
+      "Normalized seven inputs, serialized the trained model, and served predictions with Flask.",
     ],
     technologies: [
-      "Python", "Flask", "Scikit-Learn", "PyTorch",
+      "Python", "Flask", "scikit-learn", "PyTorch",
       "Random Forest", "SVM", "KNN", "Logistic Regression",
-      "Pandas", "NumPy", "Matplotlib", "MinMaxScaler",
+      "pandas", "NumPy", "Matplotlib", "MinMaxScaler",
       "Jupyter", "VS Code", "Git",
     ],
     github: "https://github.com/Bharadwaj-1953/FarmOracle",
@@ -177,32 +175,30 @@ const projects = [
   {
     title: "MoodLens - Multimodal Emotion Recognition via Facial Expression and Speech",
     description:
-      "Dual-pipeline CNN system classifying emotions from facial images and audio simultaneously, achieving over 95% accuracy on both modalities with a real-time Tkinter GUI.",
+      "Built independent CNNs to classify emotion from facial images and audio, with a local Tkinter interface.",
     features: [
-      "Dual CNN pipelines independently classify facial expressions and speech emotion with over 95% accuracy each.",
-      "Classifies 7 emotions using TensorFlow, Keras, and OpenCV with Librosa for MFCC audio feature extraction.",
-      "Real-time predictions via Tkinter GUI with simple upload-and-predict interface.",
+      "Both models exceeded 95% training accuracy across seven emotion classes.",
+      "Used OpenCV for images and Librosa for audio feature extraction, then integrated both models into the desktop interface.",
     ],
     technologies: [
       "Python", "TensorFlow", "Keras", "OpenCV",
       "CNN", "Librosa", "Tkinter", "NumPy",
-      "Pandas", "Anaconda", "Jupyter", "Git",
+      "pandas", "Anaconda", "Jupyter", "Git",
     ],
     github: "https://github.com/Bharadwaj-1953/MoodLens",
   },
   {
     title: "OncoCast - Machine Learning-Based Tumor Classification System",
     description:
-      "Breast cancer classification system benchmarking four ML models and a custom ANN on the WDBC dataset, achieving 98% accuracy while minimizing false negatives for diagnostic reliability.",
+      "Compared a custom neural network with classical models on the Wisconsin Diagnostic Breast Cancer dataset.",
     features: [
-      "ANN built with TensorFlow and Keras achieves 98% accuracy on 569 WDBC samples with 30 numerical features.",
-      "Benchmarked SVM, Random Forest, and KNN against the custom neural network on Precision, Recall, F1, and ROC-AUC.",
-      "Engineered to minimize false negatives, prioritizing diagnostic reliability for life-critical cancer detection.",
+      "The neural network achieved 98% accuracy on a dataset of 569 samples with 30 features.",
+      "Compared SVM, Random Forest, and KNN using precision, recall, F1, and ROC-AUC, emphasizing false negatives.",
     ],
     technologies: [
-      "Python", "TensorFlow", "Keras", "Scikit-Learn",
+      "Python", "TensorFlow", "Keras", "scikit-learn",
       "ANN", "SVM", "KNN", "Random Forest",
-      "Pandas", "NumPy", "Matplotlib", "Seaborn",
+      "pandas", "NumPy", "Matplotlib", "Seaborn",
       "Jupyter", "VS Code", "Git",
     ],
     github: "https://github.com/Bharadwaj-1953/OncoCast",
@@ -210,11 +206,10 @@ const projects = [
   {
     title: "StreamHive - Cloud-Native OTT Streaming Platform",
     description:
-      "Production-grade OTT streaming platform replicating core commercial streaming functionality with full authentication, profile management, and responsive multimedia UI. Deployed live on AWS EC2 with S3 media storage.",
+      "Built a responsive streaming application with account management, profiles, and a browsable media catalog.",
     features: [
-      "Full authentication system with secure login, registration, and session state management.",
-      "Rich multimedia interface with categorized content, trending titles, and dynamic previews.",
-      "Deployed live on AWS EC2 with S3 storage, Apache server, and SSL-secured access.",
+      "Implemented session-based authentication, image uploads, and server-side profile validation in PHP.",
+      "Hosted the application on AWS EC2 with S3 media storage and SSL.",
     ],
     technologies: [
       "PHP", "JavaScript", "HTML5", "CSS3", "Bootstrap",

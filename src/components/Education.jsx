@@ -24,11 +24,11 @@ const educationData = [
 
 export default function Education() {
   return (
-    <section className="py-24 md:py-32 bg-zinc-950">
+    <section className="py-24 md:py-32">
       <div className="max-w-5xl mx-auto px-6 lg:px-10">
 
         <AnimatedSection>
-          <p className="text-indigo-400 font-mono text-xs tracking-[0.2em] uppercase mb-3">
+          <p className="text-accent-400 font-mono text-xs tracking-[0.2em] uppercase mb-3">
             Education
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-zinc-100 mb-12">
@@ -36,10 +36,10 @@ export default function Education() {
           </h2>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
           {educationData.map((edu, i) => (
             <AnimatedSection key={edu.university} delay={i * 0.1}>
-              <div className="bg-zinc-900/50 border border-zinc-800/60 rounded-2xl p-8 hover:border-indigo-500/30 hover:bg-zinc-900/70 transition-all duration-300 h-full flex flex-col">
+              <div className="open-entry h-full flex flex-col">
                 <img
                   src={edu.logo}
                   alt={edu.university}
@@ -49,10 +49,10 @@ export default function Education() {
                   {edu.degree}
                 </h3>
                 <p className="text-sm text-zinc-400 mb-0.5">{edu.university}</p>
-                <p className="text-xs text-zinc-600 font-mono mb-5">{edu.location}</p>
-                <div className="flex items-center justify-between pt-4 border-t border-zinc-800/60">
-                  <span className="text-xs font-mono text-zinc-500">{edu.duration}</span>
-                  <span className="text-sm font-bold font-mono text-indigo-400">
+                <p className="text-xs text-zinc-400 font-mono mb-5">{edu.location}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-panel-line">
+                  <span className="text-xs font-mono text-zinc-400">{edu.duration}</span>
+                  <span className="text-sm font-bold font-mono text-accent-400">
                     GPA {edu.gpa}
                   </span>
                 </div>
