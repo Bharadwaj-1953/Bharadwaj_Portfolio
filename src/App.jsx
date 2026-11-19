@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import Lenis from 'lenis';
-
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,38 +9,15 @@ import Education from './components/Education';
 import Publications from './components/Publications';
 import Certifications from './components/Certifications';
 import Footer from './components/Footer';
+import ContactDock from './components/ContactDock';
 import MouseTrail from './components/MouseTrail';
 
 export default function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      touchMultiplier: 2,
-    });
-
-    let active = true;
-
-    function raf(time) {
-      if (!active) return;
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      active = false;
-      lenis.destroy();
-    };
-  }, []);
-
   return (
-    <div className="bg-zinc-950 text-zinc-100 min-h-screen">
-      <MouseTrail />
+    <>
+      <a className="skip-link" href="#main">Skip to content</a>
       <Navbar />
-      <main>
+      <main id="main" tabIndex={-1}>
         <Hero />
         <About />
         <Experience />
@@ -53,6 +28,8 @@ export default function App() {
         <Certifications />
       </main>
       <Footer />
-    </div>
+      <ContactDock />
+      <MouseTrail />
+    </>
   );
 }

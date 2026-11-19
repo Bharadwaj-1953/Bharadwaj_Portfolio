@@ -1,117 +1,50 @@
-<h1 align="center">Bharadwaj Manne — Portfolio</h1>
+# Bharadwaj Manne — Portfolio
 
-<p align="center">
-  <strong>Software Engineer · Backend & Distributed Systems</strong>
-</p>
+Software engineer focused on backend and distributed systems, performance, and reliability.
 
-<p align="center">
-  <a href="https://bharadwaj.vercel.app">bharadwaj.vercel.app</a> &nbsp;·&nbsp;
-  <a href="https://github.com/Bharadwaj-1953">GitHub</a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/bharadwaj-manne-711476249/">LinkedIn</a>
-</p>
+[Live portfolio](https://bharadwaj.vercel.app/) · [GitHub](https://github.com/Bharadwaj-1953) · [LinkedIn](https://www.linkedin.com/in/bharadwaj-manne-711476249/)
 
----
+## What’s inside
 
-## Overview
+- A filterable catalog of 14 GitHub projects. PMTrace, DriftScope, and EoMT are featured, with expandable technical details and repository links.
+- Employer-grouped experience, education, certifications, and a filterable skills directory.
+- An IEEE speech-enhancement paper and an Indian patent application, with expandable research details and publication identifiers.
+- Responsive navigation and contact links, an optimized mobile portrait, and motion that respects reduced-motion preferences.
 
-Personal portfolio for Bharadwaj Manne, Software Engineer focused on backend and distributed systems. Built with React 18, Vite, Tailwind CSS, and Framer Motion. Features smooth scroll animations, a filterable project section, interactive terminal, and full responsive design across all devices and browsers.
+Built with React, Vite, Tailwind CSS, and Framer Motion. The site is hosted on Vercel.
 
----
+## Run locally
 
-## Tech Stack
+Use Node.js 22 and npm.
 
-| Layer | Technology |
-|---|---|
-| Framework | React 18 + Vite 6 |
-| Styling | Tailwind CSS v3 + Custom CSS |
-| Animations | Framer Motion 13 |
-| Smooth Scroll | Lenis 1.3 |
-| Icons | React Icons, Devicons CDN |
-| Fonts | Syne (display) + Inter (body) + JetBrains Mono — Google Fonts |
-| Deployment | Vercel (auto-deploy on push) |
-
----
-
-## Sections
-
-- **Hero** — Animated role cycling, macOS-style terminal with live-typed achievements, mouse trail
-- **About** — Bio + animated stat cards (221x speedup, GPA 3.87, 14 projects, 2 publications)
-- **Projects** — 14 projects with filter tabs (Featured / All / Systems / ML / Full-Stack / Cloud), expandable tech tags
-- **Experience** — Timeline of 8 professional roles across Florida DCF, FSU, Sri Bhramara, Unical Systems, and Oasis Infobyte
-- **Skills** — 10 tabbed categories with technology icons and labels
-- **Education** — FSU MS CS (GPA 3.87) + VIT-AP BTech (GPA 9.38)
-- **Certifications** — 9 issuer groups: Microsoft, Google Cloud, AWS, Salesforce, Anthropic, Cisco, MathWorks, Udemy, Academic Programs
-- **Publications** — IEEE paper (DTFAAEC) + IPO India patent
-
----
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── About.jsx
-│   ├── Projects.jsx
-│   ├── Experience.jsx
-│   ├── Skills.jsx
-│   ├── Education.jsx
-│   ├── Certifications.jsx
-│   ├── Publications.jsx
-│   ├── Footer.jsx
-│   ├── AnimatedSection.jsx
-│   └── MouseTrail.jsx
-├── data/
-│   ├── projects.js
-│   ├── skills.js
-│   ├── experience.js
-│   └── certifications.js
-├── App.jsx
-└── index.css
-public/
-├── Bharadwaj_Manne.jpg
-├── bm-logo.png
-└── [institution logos]
-```
-
----
-
-## Running Locally
-
-Use Node.js 22.
-
-```bash
+```sh
 git clone https://github.com/Bharadwaj-1953/Bharadwaj_Portfolio.git
 cd Bharadwaj_Portfolio
 npm ci
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173)
+Open [localhost:5173](http://localhost:5173/).
 
----
+## Production build
 
-## Build for Production
-
-```bash
+```sh
 npm run build
+npm run preview
 ```
 
-Output in `dist/`. Deployed automatically to Vercel on every push to `main`.
+Vite writes the production site to `dist/`. The preview command serves that build locally, normally at [localhost:4173](http://localhost:4173/).
 
-For maintenance, use `npm update` for updates within the current version ranges,
-then run `npm audit` and `npm run build`. Major framework upgrades should be
-reviewed separately to preserve the existing styling and animation behavior.
+Vercel builds from the repository root using the Vite framework preset, Node.js 22, `npm ci`, and `npm run build`, with `dist/` as the output directory. Git deployments use the production branch configured in the Vercel project.
 
----
+## Update the portfolio
 
-## Contact
+| Area | Location |
+| --- | --- |
+| Projects, skills, experience, and certifications | `src/data/` |
+| Page sections, navigation, and contact links | `src/components/` |
+| Layout, colors, and motion styles | `src/index.css` and `tailwind.config.js` |
+| Portraits, logo, icons, and social preview image | `public/` |
+| Page title, description, and social sharing metadata | `index.html` |
 
-- **Email**: [manne.bharadwaj.1953@gmail.com](mailto:manne.bharadwaj.1953@gmail.com)
-- **LinkedIn**: [Bharadwaj Manne](https://www.linkedin.com/in/bharadwaj-manne-711476249/)
-- **GitHub**: [@Bharadwaj-1953](https://github.com/Bharadwaj-1953)
-
----
-
-<p align="center"><i>&copy; 2026 Bharadwaj Manne. All rights reserved.</i></p>
+Before publishing, build the site and spot-check narrow portrait and short landscape layouts, keyboard navigation, project and research disclosures, and reduced-motion mode. Commit source changes, the lockfile when dependencies change, and public assets used by the site. Local backups and build output are excluded from version control.

@@ -1,12 +1,29 @@
-node_modules/
-dist/
+# Dependencies and build output
+/node_modules/
+/dist/
+/dist-ssr/
+/coverage/
+*.tsbuildinfo
+npm-debug.log*
+
+# Local environment and deployment state
 .env
 .env.*
 !.env.example
-.vercel/
-.claude/
-.github/
-.nvmrc
-vercel.json
-eslint.config.mjs
-scripts/smoke-test.mjs
+/.vercel/
+
+# Local tooling retained outside version control
+/.claude/
+/.github/
+/.nvmrc
+/vercel.json
+/eslint.config.mjs
+/scripts/smoke-test.mjs
+
+# Local rollback and source assets
+/portfolio-before-redesign-*.bundle
+/.local-assets/
+
+# OS metadata
+.DS_Store
+Thumbs.db

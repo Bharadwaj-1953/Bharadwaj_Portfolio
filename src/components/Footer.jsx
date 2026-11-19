@@ -1,43 +1,46 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import { FiArrowUp, FiArrowUpRight } from 'react-icons/fi';
 
-const socials = [
-  { icon: FaEnvelope, href: 'mailto:manne.bharadwaj.1953@gmail.com', label: 'Email', hover: 'hover:text-red-400' },
-  { icon: FaGithub, href: 'https://github.com/Bharadwaj-1953', label: 'GitHub', hover: 'hover:text-zinc-100' },
-  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/bharadwaj-manne-711476249/', label: 'LinkedIn', hover: 'hover:text-blue-400' },
-  { icon: FaInstagram, href: 'https://www.instagram.com/bharadwaj_manne', label: 'Instagram', hover: 'hover:text-pink-400' },
+const profiles = [
+  ['GitHub', 'https://github.com/Bharadwaj-1953'],
+  ['LinkedIn', 'https://www.linkedin.com/in/bharadwaj-manne-711476249/'],
+  ['Instagram', 'https://www.instagram.com/bharadwaj_manne'],
 ];
 
 export default function Footer() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const hero = document.getElementById('hero');
+    const observer = new IntersectionObserver(([entry]) => {
+      setShowBackToTop(!entry.isIntersecting && entry.boundingClientRect.bottom <= 0);
+    });
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className="border-t border-zinc-800/50 bg-zinc-950 py-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
-
-        <div className="flex items-center gap-3">
-          <img src="/bm-logo.png" alt="BM" className="w-6 h-6 object-contain opacity-50" />
-          <span className="text-sm text-zinc-600 font-mono">Bharadwaj Manne</span>
-        </div>
-
-        <div className="flex items-center gap-5">
-          {socials.map(({ icon: Icon, href, label, hover }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith('mailto') ? undefined : '_blank'}
-              rel="noopener noreferrer"
-              aria-label={label}
-              className={`text-zinc-600 ${hover} transition-colors duration-200`}
-            >
-              <Icon size={16} />
-            </a>
+    <footer id="contact" tabIndex={-1} className="site-footer">
+      <div className="shell">
+        <p className="eyebrow">Contact</p>
+        <h2>Get in touch.</h2>
+        <div className="footer-links">
+          <a className="solid-button" href="mailto:manne.bharadwaj.1953@gmail.com">Send an email <FiArrowUpRight data-arrow="diagonal" aria-hidden="true" /></a>
+          {profiles.map(([label, href]) => (
+            <a className="text-link" key={label} href={href} target="_blank" rel="noopener noreferrer">{label} <FiArrowUpRight data-arrow="diagonal" aria-hidden="true" /></a>
           ))}
         </div>
-
-        <p className="text-xs text-zinc-700 font-mono">
-          &copy; {new Date().getFullYear()} Bharadwaj Manne. All rights reserved.
-        </p>
-
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Bharadwaj Manne</span>
+          <a className="text-link footer-back-to-top" href="#hero">Back to top <FiArrowUp data-arrow="up" aria-hidden="true" /></a>
+        </div>
       </div>
+      {showBackToTop && (
+        <a className="back-to-top-float" href="#hero" aria-label="Back to top">
+          <FiArrowUp data-arrow="up" aria-hidden="true" />
+          <span aria-hidden="true">Back to top</span>
+        </a>
+      )}
     </footer>
   );
 }

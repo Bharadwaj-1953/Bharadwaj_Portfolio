@@ -1,75 +1,77 @@
 import { useEffect, useRef } from 'react';
 
+const lifetime = 640;
+
 export default function MouseTrail() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    if (window.matchMedia('(hover: none)').matches) return;
-
     const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const context = canvas.getContext('2d');
+    if (!context) return;
+    const media = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+    const trail = [];
+    let frame = 0;
+    let width = 0;
+    let height = 0;
 
-    const LIFETIME = 700; // ms each dot lives before fully fading
-    const trail = []; // { x, y, t }
-    let animId;
+    function resize() {
+      const density = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width * density;
+      canvas.height = height * density;
+      context.setTransform(density, 0, 0, density, 0, 0);
+    }
 
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resize();
+    function draw(now) {
+      frame = 0;
+      context.clearRect(0, 0, width, height);
+      while (trail.length && now - trail[0].time >= lifetime) trail.shift();
+      trail.forEach((point, index) => {
+        const age = Math.max(0, now - point.time);
+        const intensity = (1 - age / lifetime) * (index + 1) / trail.length;
+        context.beginPath();
+        context.arc(point.x, point.y, 4.5 * intensity, 0, 2 * Math.PI);
+        context.fillStyle = `rgba(232, 177, 112, ${0.61 * intensity})`;
+        context.fill();
+      });
+      if (trail.length) frame = requestAnimationFrame(draw);
+    }
 
-    const onMouseMove = e => {
-      trail.push({ x: e.clientX, y: e.clientY, t: Date.now() });
-    };
+    function move(event) {
+      if (event.pointerType !== 'mouse') return;
+      const previous = trail.at(-1);
+      if (previous && Math.hypot(event.clientX - previous.x, event.clientY - previous.y) < 4) return;
+      trail.push({ x: event.clientX, y: event.clientY, time: performance.now() });
+      if (trail.length > 70) trail.shift();
+      if (!frame) frame = requestAnimationFrame(draw);
+    }
 
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      const now = Date.now();
-
-      // Drop expired dots
-      while (trail.length > 0 && now - trail[0].t > LIFETIME) {
-        trail.shift();
-      }
-
-      for (let i = 0; i < trail.length; i++) {
-        const dot = trail[i];
-        const age = now - dot.t;
-        const life = 1 - age / LIFETIME;          // 1 = brand new, 0 = expired
-        const pos  = (i + 1) / trail.length;      // 0 = oldest remaining, 1 = newest
-
-        const radius = pos * 5 * life;
-        const alpha  = pos * life * 0.5;
-
-        if (radius <= 0 || alpha <= 0) continue;
-
-        ctx.beginPath();
-        ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(99, 102, 241, ${alpha})`;
-        ctx.fill();
-      }
-
-      animId = requestAnimationFrame(draw);
-    };
-
-    window.addEventListener('mousemove', onMouseMove, { passive: true });
-    window.addEventListener('resize', resize, { passive: true });
-    draw();
-
-    return () => {
-      window.removeEventListener('mousemove', onMouseMove);
+    function stop() {
+      window.removeEventListener('pointermove', move);
       window.removeEventListener('resize', resize);
-      cancelAnimationFrame(animId);
+      cancelAnimationFrame(frame);
+      frame = 0;
+      trail.length = 0;
+      context.clearRect(0, 0, width, height);
+    }
+
+    function configure() {
+      stop();
+      if (!media.matches) return;
+      resize();
+      window.addEventListener('pointermove', move, { passive: true });
+      window.addEventListener('resize', resize, { passive: true });
+    }
+
+    configure();
+    media.addEventListener('change', configure);
+    return () => {
+      stop();
+      media.removeEventListener('change', configure);
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-[9997]"
-      aria-hidden="true"
-    />
-  );
+  return <canvas ref={canvasRef} className="mouse-trail" aria-hidden="true" />;
 }
